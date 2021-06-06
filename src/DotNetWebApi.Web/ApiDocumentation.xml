@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotNetWebApi.Web</name>
+    </assembly>
+    <members>
+        <member name="T:DotNetWebApi.Web.Controllers.v1.AccountController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DotNetWebApi.Web.Controllers.v1.AccountController.#ctor(Microsoft.AspNetCore.Identity.UserManager{DotNetWebApi.DomainClasses.User.User},Microsoft.AspNetCore.Identity.SignInManager{DotNetWebApi.DomainClasses.User.User},DotNetWebApi.Services.Contracts.IUserService,DotNetWebApi.Services.Jwt.ITokenFactoryService,DotNetWebApi.Services.Jwt.ITokenStoreService)">
+            <summary>
+            
+            </summary>
+            <param name="userManager"></param>
+            <param name="signInManager"></param>
+        </member>
+        <member name="M:DotNetWebApi.Web.Controllers.v1.AccountController.LoginOAuth2(DotNetWebApi.Web.Models.LoginOAuth2,System.Threading.CancellationToken)">
+            <summary>
+            لاگین شدن و دریافت توکن
+            </summary>
+            <param name="tokenRequest">The information of token request</param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetWebApi.Web.Controllers.v1.AccountController.GetToken(DotNetWebApi.Web.Models.Login,System.Threading.CancellationToken)">
+            <summary>
+            لاگین شدن و دریافت توکن
+            </summary>
+            <param name="tokenRequest">The information of token request</param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetWebApi.Web.Controllers.v1.AccountController.RefreshToken(DotNetWebApi.Web.Models.TokenRequest,System.Threading.CancellationToken)">
+            <summary>
+            دریافت توکن جدید
+            </summary>
+            <param name="tokenRequest"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetWebApi.Web.Controllers.v1.AccountController.ChangePassword(DotNetWebApi.Web.Models.ChangePasswordDto,System.Threading.CancellationToken)">
+            <summary>
+            تغییر رمز حساب کاربری
+            </summary>
+            <param name="model"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="P:DotNetWebApi.Web.Controllers.v1.AddressDto.Country">
+            <summary>
+            3-letter ISO country code
+            </summary>
+            <example>Iran</example>
+        </member>
+        <member name="P:DotNetWebApi.Web.Controllers.v1.AddressDto.City">
+            <summary>
+            Name of city
+            </summary>
+            <example>Seattle</example>
+        </member>
+        <member name="T:DotNetWebApi.Web.Controllers.v1.UsersController">
+            <summary>
+            ایجاد، ویرایش و حذف کاربران ( مختص مدیر سیستم )
+            </summary>
+        </member>
+        <member name="M:DotNetWebApi.Web.Controllers.v1.UsersController.#ctor(DotNetWebApi.Services.Contracts.IUserService,Microsoft.AspNetCore.Identity.UserManager{DotNetWebApi.DomainClasses.User.User})">
+            <summary>
+            
+            </summary>
+            <param name="userService"></param>
+            <param name="userManager"></param>
+        </member>
+        <member name="M:DotNetWebApi.Web.Controllers.v1.UsersController.Get(DotNetWebApi.IocConfig.Api.BaseController.UrlQueryPagingParameters,System.Threading.CancellationToken)">
+            <summary>
+            دریافت لیست کاربران
+            </summary>
+            <remarks>این سرویس لیست کاربران موجود در سیستم را به صورت صفحه بندی شده بر میگرداند.</remarks>
+            <param name="urlQueryParameters"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetWebApi.Web.Controllers.v1.UsersController.Get(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            دریافت مشخصات یه کاربر خاص
+            </summary>
+            <param name="id"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetWebApi.Web.Controllers.v1.UsersController.Create(DotNetWebApi.Web.Models.UserDto,System.Threading.CancellationToken)">
+            <summary>
+            ایجاد کاربر جدید
+            </summary>
+            <param name="userDto"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetWebApi.Web.Controllers.v1.UsersController.Update(System.Int32,DotNetWebApi.DomainClasses.User.User,System.Threading.CancellationToken)">
+            <summary>
+            ویرایش کاربر
+            </summary>
+            <param name="id"></param>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetWebApi.Web.Controllers.v1.UsersController.Delete(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            حذف کاربر
+            </summary>
+            <param name="id"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DotNetWebApi.Web.Models.ChangePasswordDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DotNetWebApi.Web.Models.ChangePasswordDto.OldPassword">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DotNetWebApi.Web.Models.ChangePasswordDto.NewPassword">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DotNetWebApi.Web.Models.ChangePasswordDto.ConfirmPassword">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DotNetWebApi.Web.Models.Login">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DotNetWebApi.Web.Models.LoginOAuth2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DotNetWebApi.Web.Models.UserDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DotNetWebApi.Web.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DotNetWebApi.Web.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DotNetWebApi.Web.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DotNetWebApi.Web.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:DotNetWebApi.Web.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:DotNetWebApi.Web.Startup.ConfigureContainer(Autofac.ContainerBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="M:DotNetWebApi.Web.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>
